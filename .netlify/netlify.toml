@@ -10,7 +10,6 @@ redirects = []
 publish = "/data/.openclaw/workspace/websites/lieblingsgrieche-dannstadt/dist"
 publishOrigin = "ui"
 commandOrigin = "ui"
-base = "/data/.openclaw/workspace/websites/lieblingsgrieche-dannstadt"
 command = "npm run build"
 
 [build.environment]
