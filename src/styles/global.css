@@ -87,8 +87,10 @@ h1, h2, h3, h4, h5, h6 {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 2rem 0;
+  margin: 2rem auto;
   position: relative;
+  width: 100%;
+  max-width: 28rem;
 }
 
 .menu-divider::before,
@@ -97,6 +99,15 @@ h1, h2, h3, h4, h5, h6 {
   flex: 1;
   height: 1px;
   background: linear-gradient(90deg, transparent, #c8a951, transparent);
+  max-width: 120px;
+}
+
+.menu-divider::before {
+  margin-right: 1rem;
+}
+
+.menu-divider::after {
+  margin-left: 1rem;
 }
 
 .menu-divider-dot {
@@ -104,7 +115,7 @@ h1, h2, h3, h4, h5, h6 {
   height: 8px;
   background: #97a926;
   border-radius: 50%;
-  margin: 0 1rem;
+  flex-shrink: 0;
 }
 
 /* Menu Category Icon */
