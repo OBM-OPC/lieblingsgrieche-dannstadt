@@ -61,7 +61,7 @@ const galleryImages = [
       <div class="flex items-center justify-between h-auto py-2">
         <div class="flex-shrink-0 py-2">
           <a href="#" class="block">
-            <img id="header-logo" src="/images/lieblingsgrieche_logo_links.webp" alt="Lieblingsgrieche by Natasa" class="h-16 md:h-20 lg:h-24 w-auto transition-all duration-300" />
+            <img id="header-logo" src="/images/lieblingsgrieche_logo_links.webp" alt="Lieblingsgrieche by Natasa" class="h-[calc(var(--spacing)*12)] md:h-20 lg:h-24 w-auto transition-all duration-300" />
           </a>
         </div>
         
@@ -724,14 +724,14 @@ const galleryImages = [
     function handleScroll() {
       toggleBackToTop();
       
-      // Shrink logo on scroll
+      // Shrink logo on scroll (only on desktop)
       if (window.scrollY > 100) {
-        headerLogo.classList.remove('lg:h-24', 'md:h-20', 'h-16');
-        headerLogo.classList.add('lg:h-16', 'md:h-12', 'h-10');
+        headerLogo.classList.remove('lg:h-24', 'md:h-20');
+        headerLogo.classList.add('lg:h-16', 'md:h-12');
         mainNav.classList.add('shadow-md');
       } else {
-        headerLogo.classList.remove('lg:h-16', 'md:h-12', 'h-10');
-        headerLogo.classList.add('lg:h-24', 'md:h-20', 'h-16');
+        headerLogo.classList.remove('lg:h-16', 'md:h-12');
+        headerLogo.classList.add('lg:h-24', 'md:h-20');
         mainNav.classList.remove('shadow-md');
       }
     }

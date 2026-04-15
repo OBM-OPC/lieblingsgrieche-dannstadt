@@ -8,12 +8,13 @@
   --color-gold: #c8a951;
   --color-off-white: #f5f0e8;
   --color-warm-gray: #8a8070;
-  --header-height: 120px;
+  --spacing: 0.25rem;
+  --header-height: 100px;
 }
 
-@media (max-width: 768px) {
+@media (min-width: 768px) {
   :root {
-    --header-height: 100px;
+    --header-height: 120px;
   }
 }
 
