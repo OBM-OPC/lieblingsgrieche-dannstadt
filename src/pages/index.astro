@@ -61,7 +61,7 @@ const galleryImages = [
       <div class="flex items-center justify-between h-auto py-2">
         <div class="flex-shrink-0 py-2">
           <a href="#" class="block">
-            <img id="header-logo" src="/images/lieblingsgrieche_logo_links.webp" alt="Lieblingsgrieche by Natasa" class="h-[calc(var(--spacing)*12)] md:h-20 lg:h-24 w-auto transition-all duration-300" />
+            <img id="header-logo" src="/images/lieblingsgrieche_logo_links.webp" alt="Lieblingsgrieche by Natasa" class="h-[calc(var(--spacing)*12)] md:h-14 lg:h-16 w-auto transition-all duration-300" />
           </a>
         </div>
         
@@ -91,7 +91,7 @@ const galleryImages = [
     
     <!-- Mobile Menu Overlay -->
     <div id="mobile-menu" class="mobile-menu fixed inset-0 z-50 bg-[#faf5eb] md:hidden"
-      style="top: var(--header-height, 80px);"
+      style="top: 64px;"
     >
       <div class="flex flex-col items-center justify-center h-full space-y-8 pt-8"
         <a href="#speisekarte" class="mobile-nav-link text-2xl font-medium text-[#1a1a1a] hover:text-[#97a926] transition-colors">Speisekarte</a>
@@ -102,7 +102,7 @@ const galleryImages = [
   </nav>
 
   <!-- Hero Section -->
-  <section class="relative flex items-center justify-center overflow-hidden py-12 md:py-16 lg:py-20">
+  <section id="hero" class="relative flex items-center justify-center overflow-hidden py-8 md:min-h-[calc(100vh-var(--header-height))] md:py-0" style="padding-top: max(var(--header-height), 1rem);">
     <!-- Background Image -->
     <div class="absolute inset-0">
       <img 
@@ -144,7 +144,7 @@ const galleryImages = [
     </div>
 
     <!-- Scroll indicator -->
-    <div class="relative z-10 mt-8 animate-bounce text-center">
+    <div class="absolute bottom-6 md:bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
       <svg class="w-6 h-6 text-white/60 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"/>
       </svg>
@@ -726,12 +726,12 @@ const galleryImages = [
       
       // Shrink logo on scroll (only on desktop)
       if (window.scrollY > 100) {
-        headerLogo.classList.remove('lg:h-24', 'md:h-20');
-        headerLogo.classList.add('lg:h-16', 'md:h-12');
+        headerLogo.classList.remove('lg:h-16', 'md:h-14');
+        headerLogo.classList.add('lg:h-12', 'md:h-10');
         mainNav.classList.add('shadow-md');
       } else {
-        headerLogo.classList.remove('lg:h-16', 'md:h-12');
-        headerLogo.classList.add('lg:h-24', 'md:h-20');
+        headerLogo.classList.remove('lg:h-12', 'md:h-10');
+        headerLogo.classList.add('lg:h-16', 'md:h-14');
         mainNav.classList.remove('shadow-md');
       }
     }
