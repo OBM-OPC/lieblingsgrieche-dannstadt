@@ -89,23 +89,18 @@ const galleryImages = [
       </div>
     </div>
     
-    <!-- Mobile Menu Overlay -->
-    <div id="mobile-menu" class="fixed inset-0 z-[100] bg-[#faf5eb] transform translate-x-full transition-transform duration-300 ease-out md:hidden">
-      <div class="flex flex-col items-center justify-center h-full px-6">
-        <!-- Logo -->
-        <div class="mb-8">
-          <img src="/images/lieblingsgrieche_logo_links.webp" alt="Lieblingsgrieche" class="h-16 w-auto" />
-        </div>
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="fixed inset-0 z-[100] bg-[#faf5eb] transform translate-x-full transition-transform duration-300 md:hidden">
+      <div class="flex flex-col items-center justify-center h-full">
+        <img src="/images/lieblingsgrieche_logo_links.webp" alt="Lieblingsgrieche" class="h-16 w-auto mb-10" />
         
-        <!-- Navigation Links -->
-        <nav class="flex flex-col items-center space-y-6">
-          <a href="#speisekarte" class="text-2xl font-medium text-[#1a1a1a] hover:text-[#97a926] transition-colors">Speisekarte</a>
-          <a href="#galerie" class="text-2xl font-medium text-[#1a1a1a] hover:text-[#97a926] transition-colors">Galerie</a>
-          <a href="#kontakt" class="text-2xl font-medium text-[#1a1a1a] hover:text-[#97a926] transition-colors">Kontakt</a>
+        <nav class="flex flex-col items-center space-y-8">
+          <a href="#speisekarte" class="text-2xl font-medium text-[#1a1a1a] hover:text-[#97a926]">Speisekarte</a>
+          <a href="#galerie" class="text-2xl font-medium text-[#1a1a1a] hover:text-[#97a926]">Galerie</a>
+          <a href="#kontakt" class="text-2xl font-medium text-[#1a1a1a] hover:text-[#97a926]">Kontakt</a>
         </nav>
         
-        <!-- Call Button -->
-        <a href="tel:063219398866" class="mt-10 inline-flex items-center px-8 py-3 bg-[#97a926] text-white text-lg font-medium rounded-full hover:bg-[#7a8a1f] transition-colors">
+        <a href="tel:063219398866" class="mt-12 inline-flex items-center px-8 py-3 bg-[#97a926] text-white text-lg font-medium rounded-full">
           <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
           </svg>
@@ -683,36 +678,34 @@ const galleryImages = [
       dateInput.setAttribute('min', today);
     }
     
-    // Mobile Menu
+    // Mobile Menu - Simple Toggle
     const hamburgerBtn = document.getElementById('hamburger-btn');
     const hamburgerIcon = document.getElementById('hamburger-icon');
     const mobileMenu = document.getElementById('mobile-menu');
+    const menuLinks = mobileMenu.querySelectorAll('a');
     
-    function openMobileMenu() {
-      mobileMenu.classList.remove('translate-x-full');
-      mobileMenu.classList.add('translate-x-0');
-      hamburgerIcon.classList.add('hamburger-open');
-      document.body.style.overflow = 'hidden';
-    }
+    let isMenuOpen = false;
     
-    function closeMobileMenu() {
-      mobileMenu.classList.remove('translate-x-0');
-      mobileMenu.classList.add('translate-x-full');
-      hamburgerIcon.classList.remove('hamburger-open');
-      document.body.style.overflow = '';
-    }
-    
-    hamburgerBtn.addEventListener('click', () => {
-      if (mobileMenu.classList.contains('translate-x-full')) {
-        openMobileMenu();
+    function toggleMenu() {
+      isMenuOpen = !isMenuOpen;
+      if (isMenuOpen) {
+        mobileMenu.style.transform = 'translateX(0)';
+        hamburgerIcon.classList.add('hamburger-open');
+        document.body.style.overflow = 'hidden';
       } else {
-        closeMobileMenu();
+        mobileMenu.style.transform = 'translateX(100%)';
+        hamburgerIcon.classList.remove('hamburger-open');
+        document.body.style.overflow = '';
       }
-    });
+    }
     
-    // Close mobile menu when clicking a link
-    document.querySelectorAll('#mobile-menu a').forEach(link => {
-      link.addEventListener('click', closeMobileMenu);
+    hamburgerBtn.addEventListener('click', toggleMenu);
+    
+    // Close menu when clicking any link
+    menuLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        if (isMenuOpen) toggleMenu();
+      });
     });
     
     // Back to Top Button
