@@ -61,7 +61,7 @@ const galleryImages = [
       <div class="flex items-center justify-between h-16">
         <div class="flex-shrink-0">
           <a href="#" class="block">
-            <img id="header-logo" src="/images/lieblingsgrieche_logo_links.webp" alt="Lieblingsgrieche by Natasa" class="h-12 w-auto transition-all duration-300" />
+            <img id="header-logo" src="/images/lieblingsgrieche_logo_links.webp" alt="Lieblingsgrieche by Natasa" class="h-16 md:h-20 lg:h-24 w-auto transition-all duration-300" />
           </a>
         </div>
         
@@ -347,7 +347,7 @@ const galleryImages = [
       <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
         <!-- Column 1: Brand + Social -->
         <div>
-          <img src="/images/lieblingsgrieche_logo_links_weiss.webp" alt="Lieblingsgrieche by Natasa" class="h-12 w-auto mb-4" />
+          <img src="/images/lieblingsgrieche_logo_links_weiss.webp" alt="Lieblingsgrieche by Natasa" class="h-16 md:h-20 lg:h-24 w-auto mb-4" />
           <p class="text-[#8a8070] text-sm">
             Erleben Sie den Geschmack Griechenlands – frisch zubereitet mit traditionellen Rezepten und mediterranem Flair.
           </p>
@@ -715,12 +715,12 @@ const galleryImages = [
       
       // Shrink logo on scroll
       if (window.scrollY > 100) {
-        headerLogo.classList.remove('h-12');
-        headerLogo.classList.add('h-8');
+        headerLogo.classList.remove('lg:h-24', 'md:h-20', 'h-16');
+        headerLogo.classList.add('lg:h-16', 'md:h-12', 'h-10');
         mainNav.classList.add('shadow-md');
       } else {
-        headerLogo.classList.remove('h-8');
-        headerLogo.classList.add('h-12');
+        headerLogo.classList.remove('lg:h-16', 'md:h-12', 'h-10');
+        headerLogo.classList.add('lg:h-24', 'md:h-20', 'h-16');
         mainNav.classList.remove('shadow-md');
       }
     }
