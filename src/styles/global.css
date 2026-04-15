@@ -53,6 +53,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Mobile Menu Styles */
 .mobile-menu {
+  background-color: #ffffff !important;
   transform: translateY(100%);
   opacity: 0;
   visibility: hidden;
@@ -63,6 +64,7 @@ h1, h2, h3, h4, h5, h6 {
   transform: translateY(0);
   opacity: 1;
   visibility: visible;
+  background-color: #ffffff !important;
 }
 
 /* Hamburger Animation */
