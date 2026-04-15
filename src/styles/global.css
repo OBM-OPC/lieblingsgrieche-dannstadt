@@ -51,21 +51,6 @@ h1, h2, h3, h4, h5, h6 {
 .fade-in-delay-3 { transition-delay: 0.3s; }
 .fade-in-delay-4 { transition-delay: 0.4s; }
 
-/* Mobile Menu Styles */
-.mobile-menu {
-  background-color: #ffffff;
-  transform: translateY(100%);
-  opacity: 0;
-  visibility: hidden;
-  transition: transform 0.3s ease-out, opacity 0.3s ease-out, visibility 0.3s ease-out;
-}
-
-.mobile-menu.open {
-  transform: translateY(0);
-  opacity: 1;
-  visibility: visible;
-}
-
 /* Hamburger Animation */
 .hamburger-line {
   transition: transform 0.3s ease, opacity 0.3s ease;
