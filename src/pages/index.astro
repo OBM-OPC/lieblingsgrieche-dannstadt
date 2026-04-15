@@ -58,8 +58,8 @@ const galleryImages = [
   <!-- Navigation -->
   <nav id="main-nav" class="fixed top-0 left-0 right-0 z-40 bg-[#faf5eb]/95 backdrop-blur-sm border-b border-[#c8a951]/20 transition-all duration-300">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex items-center justify-between h-16">
-        <div class="flex-shrink-0">
+      <div class="flex items-center justify-between h-auto py-2">
+        <div class="flex-shrink-0 py-2">
           <a href="#" class="block">
             <img id="header-logo" src="/images/lieblingsgrieche_logo_links.webp" alt="Lieblingsgrieche by Natasa" class="h-16 md:h-20 lg:h-24 w-auto transition-all duration-300" />
           </a>
@@ -84,8 +84,10 @@ const galleryImages = [
     </div>
     
     <!-- Mobile Menu Overlay -->
-    <div id="mobile-menu" class="mobile-menu fixed inset-0 top-16 z-50 bg-[#faf5eb] md:hidden">
-      <div class="flex flex-col items-center justify-center h-full -mt-16 space-y-8">
+    <div id="mobile-menu" class="mobile-menu fixed inset-0 z-50 bg-[#faf5eb] md:hidden"
+      style="top: var(--header-height, 80px);"
+    >
+      <div class="flex flex-col items-center justify-center h-full space-y-8 pt-8"
         <a href="#speisekarte" class="mobile-nav-link text-2xl font-medium text-[#1a1a1a] hover:text-[#97a926] transition-colors">Speisekarte</a>
         <a href="#galerie" class="mobile-nav-link text-2xl font-medium text-[#1a1a1a] hover:text-[#97a926] transition-colors">Galerie</a>
         <a href="#kontakt" class="mobile-nav-link text-2xl font-medium text-[#1a1a1a] hover:text-[#97a926] transition-colors">Kontakt</a>

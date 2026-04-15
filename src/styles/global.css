@@ -8,6 +8,13 @@
   --color-gold: #c8a951;
   --color-off-white: #f5f0e8;
   --color-warm-gray: #8a8070;
+  --header-height: 120px;
+}
+
+@media (max-width: 768px) {
+  :root {
+    --header-height: 100px;
+  }
 }
 
 /* Base Styles */
@@ -19,6 +26,7 @@ body {
   font-family: 'Inter', sans-serif;
   background-color: var(--color-warm-cream);
   color: var(--color-charcoal);
+  padding-top: var(--header-height);
 }
 
 h1, h2, h3, h4, h5, h6 {
