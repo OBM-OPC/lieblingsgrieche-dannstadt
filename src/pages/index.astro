@@ -41,16 +41,16 @@ const menuCategories = [
   }
 ];
 
-// Gallery images from Pixabay
+// Gallery images from local folder
 const galleryImages = [
-  { id: "1", src: "https://images.unsplash.com/photo-1529193591184-b1d580042ec6?w=800&q=80", alt: "Griechisches Mezze-Platte" },
-  { id: "2", src: "https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=800&q=80", alt: "Frische Souvlaki vom Grill" },
-  { id: "3", src: "https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?w=800&q=80", alt: "Griechischer Salat mit Feta" },
-  { id: "4", src: "https://images.unsplash.com/photo-1534080564583-6be75777fd70?w=800&q=80", alt: "Mediterranes Restaurant Ambiente" },
-  { id: "5", src: "https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=800&q=80", alt: "Griechisches Restaurant Interieur" },
-  { id: "6", src: "https://images.unsplash.com/photo-1543339308-43e59d6b73a6?w=800&q=80", alt: "Griechische Taverna bei Nacht" },
-  { id: "7", src: "https://images.unsplash.com/photo-1514326640560-7d063ef2aed5?w=800&q=80", alt: "Olive oil and Mediterranean herbs" },
-  { id: "8", src: "https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?w=800&q=80", alt: "Griechische Desserts" }
+  { id: "1", src: "/images/gallery-1.jpg", alt: "Griechischer Salat mit Feta" },
+  { id: "2", src: "/images/gallery-2.jpg", alt: "Frische Souvlaki vom Grill" },
+  { id: "3", src: "/images/gallery-3.jpg", alt: "Griechischer Salat mit frischem Gemüse" },
+  { id: "4", src: "/images/gallery-4.jpg", alt: "Griechisches Fleischgericht vom Grill" },
+  { id: "5", src: "/images/gallery-5.jpg", alt: "Mediterranes Essen mit Oliven und Brot" },
+  { id: "6", src: "/images/gallery-6.jpg", alt: "Griechische Taverna bei Nacht" },
+  { id: "7", src: "/images/gallery-7.jpg", alt: "Olive oil and Mediterranean herbs" },
+  { id: "8", src: "/images/gallery-8.jpg", alt: "Griechische Desserts" }
 ];
 ---
 
@@ -98,7 +98,7 @@ const galleryImages = [
     <!-- Background Image -->
     <div class="absolute inset-0">
       <img 
-        src="https://images.unsplash.com/photo-1544025162-d76694265947?w=1920&q=80" 
+        src="/images/hero.jpg" 
         alt="Griechisches Essen" 
         class="w-full h-full object-cover"
       />
@@ -505,15 +505,11 @@ const galleryImages = [
             </div>
             <div class="flex justify-between items-center py-2 border-b border-white/10">
               <span class="text-[#8a8070]">Dienstag – Samstag</span>
-              <span class="text-white/80 font-medium">17:30 – 24:00</span>
+              <span class="text-white/80 font-medium">16:00 – 22:00</span>
             </div>
             <div class="flex justify-between items-center py-2 border-b border-white/10">
-              <span class="text-[#8a8070]">Sonn- und Feiertage</span>
-              <span class="text-white/80 font-medium">11:30 – 14:00 & 17:30 – 24:00</span>
-            </div>
-            <div class="pt-2 text-[#8a8070] text-xs">
-              <p>Warme Küche Di–Sa bis 22:00</p>
-              <p>So/Feiertage bis 20:30</p>
+              <span class="text-[#8a8070]">Sonntag</span>
+              <span class="text-white/80 font-medium">12:00 – 23:00</span>
             </div>
           </div>
         </div>
