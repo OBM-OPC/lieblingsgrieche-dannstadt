@@ -56,12 +56,12 @@ const galleryImages = [
 
 <Layout>
   <!-- Navigation -->
-  <nav class="fixed top-0 left-0 right-0 z-40 bg-[#faf5eb]/95 backdrop-blur-sm border-b border-[#c8a951]/20">
+  <nav id="main-nav" class="fixed top-0 left-0 right-0 z-40 bg-[#faf5eb]/95 backdrop-blur-sm border-b border-[#c8a951]/20 transition-all duration-300">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex items-center justify-between h-16">
         <div class="flex-shrink-0">
           <a href="#" class="block">
-            <img src="/images/lieblingsgrieche_logo_links.webp" alt="Lieblingsgrieche by Natasa" class="h-10 w-auto" />
+            <img id="header-logo" src="/images/lieblingsgrieche_logo_links.webp" alt="Lieblingsgrieche by Natasa" class="h-12 w-auto transition-all duration-300" />
           </a>
         </div>
         
@@ -107,9 +107,13 @@ const galleryImages = [
 
     <!-- Content -->
     <div class="relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto">
-      <div class="mb-8">
-        <img src="/images/lieblingsgrieche_logo_weiss.webp" alt="Lieblingsgrieche by Natasa" class="h-24 sm:h-32 md:h-40 w-auto mx-auto" />
+      <div class="mb-6">
+        <img src="/images/lieblingsgrieche_logo_weiss.webp" alt="Lieblingsgrieche by Natasa" class="h-32 sm:h-40 md:h-48 w-auto mx-auto" />
       </div>
+      
+      <p class="text-[#c8a951] text-sm font-medium tracking-[0.3em] uppercase mb-6">
+        Olive trifft Riesling
+      </p>
       
       <p class="text-lg sm:text-xl text-[#f5f0e8]/90 mb-10 max-w-2xl mx-auto leading-relaxed">
         Authentische griechische Küche – frisch zubereitet mit Leidenschaft und traditionellen Rezepten aus dem Herzen Griechenlands.
@@ -271,178 +275,79 @@ const galleryImages = [
         </p>
       </div>
 
-      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
-        <!-- Contact Info -->
-        <div class="space-y-8">
-          <!-- Öffnungszeiten -->
-          <div class="bg-white rounded-2xl p-8 shadow-sm border border-[#c8a951]/10">
-            <h3 class="text-xl font-semibold text-[#1a1a1a] mb-6 flex items-center" style="font-family: 'Playfair Display', serif;">
-              <svg class="w-6 h-6 text-[#97a926] mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
-              </svg>
-              Öffnungszeiten
-            </h3>
-            
-            <div class="space-y-3">
-              <div class="flex justify-between items-center py-2 border-b border-gray-100">
-                <span class="text-[#8a8070]">Montag</span>
-                <span class="text-[#1a1a1a] font-medium">Ruhetag</span>
-              </div>
-              <div class="flex justify-between items-center py-2 border-b border-gray-100">
-                <span class="text-[#8a8070]">Dienstag – Samstag</span>
-                <span class="text-[#1a1a1a] font-medium">17:30 – 24:00 Uhr</span>
-              </div>
-              <div class="flex justify-between items-center py-2 border-b border-gray-100">
-                <span class="text-[#8a8070]">Sonn- und Feiertage</span>
-                <span class="text-[#1a1a1a] font-medium">11:30 – 14:00 & 17:30 – 24:00</span>
-              </div>
-              <div class="mt-4 pt-3 border-t border-[#97a926]/20 bg-[#97a926]/5 rounded-lg p-3">
-                <p class="text-sm text-[#8a8070]"><span class="font-medium text-[#1a1a1a]">Warme Küche</span> Di–Sa bis 22:00 Uhr</p>
-                <p class="text-sm text-[#8a8070]"><span class="font-medium text-[#1a1a1a]">Warme Küche</span> So/Feiertage bis 20:30 Uhr</p>
-              </div>
-            </div>
-          </div>
-
-          <!-- Kontaktdaten -->
-          <div class="bg-white rounded-2xl p-8 shadow-sm border border-[#c8a951]/10">
-            <h3 class="text-xl font-semibold text-[#1a1a1a] mb-6 flex items-center" style="font-family: 'Playfair Display', serif;">
-              <svg class="w-6 h-6 text-[#97a926] mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
-              </svg>
-              Kontakt
-            </h3>
-            
-            <div class="space-y-4">
-              <div class="flex items-start">
-                <svg class="w-5 h-5 text-[#97a926] mr-3 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
-                </svg>
-                <div>
-                  <p class="font-medium text-[#1a1a1a]">Adresse</p>
-                  <p class="text-[#8a8070]">Neckarstraße 2e<br/>67125 Dannstadt</p>
-                </div>
-              </div>
-              
-              <a href="tel:063219398866" class="flex items-center group">
-                <svg class="w-5 h-5 text-[#97a926] mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
-                </svg>
-                <div>
-                  <p class="font-medium text-[#1a1a1a] group-hover:text-[#97a926] transition-colors">Telefon</p>
-                  <p class="text-[#8a8070]">06321 9398866</p>
-                </div>
-              </a>
-              
-              <a href="mailto:kontakt@restaurant-lieblingsgrieche2.de" class="flex items-center group">
-                <svg class="w-5 h-5 text-[#97a926] mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
-                </svg>
-                <div>
-                  <p class="font-medium text-[#1a1a1a] group-hover:text-[#97a926] transition-colors">E-Mail</p>
-                  <p class="text-[#8a8070] text-sm break-all">kontakt@restaurant-lieblingsgrieche2.de</p>
-                </div>
-              </a>
-            </div>
-          </div>
-
-          <!-- Service-Info -->
-          <div class="bg-white rounded-2xl p-8 shadow-sm border border-[#c8a951]/10">
-            <h3 class="text-xl font-semibold text-[#1a1a1a] mb-6 flex items-center" style="font-family: 'Playfair Display', serif;">
-              <svg class="w-6 h-6 text-[#97a926] mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
-              </svg>
-              Bei uns
-            </h3>
-            <div class="flex flex-wrap gap-3">
-              <span class="inline-flex items-center gap-2 px-4 py-2 bg-[#97a926]/10 text-[#97a926] rounded-full text-sm font-medium">
-                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z"/></svg>
-                Karten & Bar
-              </span>
-              <span class="inline-flex items-center gap-2 px-4 py-2 bg-[#97a926]/10 text-[#97a926] rounded-full text-sm font-medium">
-                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.111 16.404a5.964 5.964 0 01-.015.015m0 0L6.5 18m1.611-1.596a5.964 5.964 0 01-.015-.015m0 0L6.5 14m7.611 2.404a5.964 5.964 0 01-.015.015m0 0L12.5 18m1.611-1.596a5.964 5.964 0 01-.015-.015m0 0L12.5 14M3 12h18"/></svg>
-                WLAN
-              </span>
-              <span class="inline-flex items-center gap-2 px-4 py-2 bg-[#97a926]/10 text-[#97a926] rounded-full text-sm font-medium">
-                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 8h14M5 8a2 2 0 110-4h14a2 2 0 110 4M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8m-9 4h4"/></svg>
-                Parkplätze
-              </span>
-            </div>
-          </div>
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+        <!-- Linke Spalte: Öffnungszeiten -->
         <div class="bg-white rounded-2xl p-8 shadow-sm border border-[#c8a951]/10">
           <h3 class="text-xl font-semibold text-[#1a1a1a] mb-6 flex items-center" style="font-family: 'Playfair Display', serif;">
             <svg class="w-6 h-6 text-[#97a926] mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
             </svg>
-            Reservierung
+            Öffnungszeiten
           </h3>
           
-          <form 
-            action="mailto:kontakt@restaurant-lieblingsgrieche2.de" 
-            method="post" 
-            enctype="text/plain"
-            class="space-y-5"
-          >
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              <div>
-                <label for="name" class="block text-sm font-medium text-[#1a1a1a] mb-1">Name *</label>
-                <input type="text" id="name" name="Name" required />
-              </div>
-              
-              <div>
-                <label for="phone" class="block text-sm font-medium text-[#1a1a1a] mb-1">Telefon *</label>
-                <input type="tel" id="phone" name="Telefon" required />
-              </div>
+          <div class="space-y-3">
+            <div class="flex justify-between items-center py-2 border-b border-gray-100">
+              <span class="text-[#8a8070]">Montag</span>
+              <span class="text-[#1a1a1a] font-medium">Ruhetag</span>
             </div>
-            
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              <div>
-                <label for="date" class="block text-sm font-medium text-[#1a1a1a] mb-1">Datum *</label>
-                <input type="date" id="date" name="Datum" required />
-              </div>
-              
-              <div>
-                <label for="time" class="block text-sm font-medium text-[#1a1a1a] mb-1">Uhrzeit *</label>
-                <input type="time" id="time" name="Uhrzeit" required />
-              </div>
+            <div class="flex justify-between items-center py-2 border-b border-gray-100">
+              <span class="text-[#8a8070]">Dienstag – Samstag</span>
+              <span class="text-[#1a1a1a] font-medium">16:00 – 22:00 Uhr</span>
             </div>
-            
-            <div>
-              <label for="guests" class="block text-sm font-medium text-[#1a1a1a] mb-1">Anzahl Gäste *</label>
-              <select id="guests" name="Gäste" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#97a926] focus:border-transparent">
-                <option value="">Bitte wählen</option>
-                <option value="1">1 Person</option>
-                <option value="2">2 Personen</option>
-                <option value="3">3 Personen</option>
-                <option value="4">4 Personen</option>
-                <option value="5">5 Personen</option>
-                <option value="6">6 Personen</option>
-                <option value="7+">7+ Personen</option>
-              </select>
+            <div class="flex justify-between items-center py-2 border-b border-gray-100">
+              <span class="text-[#8a8070]">Sonntag</span>
+              <span class="text-[#1a1a1a] font-medium">12:00 – 23:00 Uhr</span>
             </div>
-            
-            <div>
-              <label for="message" class="block text-sm font-medium text-[#1a1a1a] mb-1">Nachricht (optional)</label>
-              <textarea id="message" name="Nachricht" rows="3"></textarea>
-            </div>
-            
-            <button type="submit" class="btn-primary w-full">
-              <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"/>
+          </div>
+        </div>
+
+        <!-- Rechte Spalte: Kontakt -->
+        <div class="bg-white rounded-2xl p-8 shadow-sm border border-[#c8a951]/10">
+          <h3 class="text-xl font-semibold text-[#1a1a1a] mb-6 flex items-center" style="font-family: 'Playfair Display', serif;">
+            <svg class="w-6 h-6 text-[#97a926] mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+            </svg>
+            Kontakt
+          </h3>
+          
+          <div class="space-y-4">
+            <div class="flex items-start">
+              <svg class="w-5 h-5 text-[#97a926] mr-3 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
               </svg>
-              Reservierung anfragen
-            </button>
+              <div>
+                <p class="font-medium text-[#1a1a1a]">Adresse</p>
+                <p class="text-[#8a8070]">Neckarstraße 2e<br/>67125 Dannstadt</p>
+              </div>
+            </div>
             
-            <p class="text-xs text-[#8a8070] text-center">
-              * Pflichtfelder. Wir melden uns schnellstmöglich zurück.
-            </p>
-          </form>
+            <a href="tel:063219398866" class="flex items-center group">
+              <svg class="w-5 h-5 text-[#97a926] mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+              </svg>
+              <div>
+                <p class="font-medium text-[#1a1a1a] group-hover:text-[#97a926] transition-colors">Telefon</p>
+                <p class="text-[#8a8070]">06321 9398866</p>
+              </div>
+            </a>
+            
+            <a href="mailto:kontakt@restaurant-lieblingsgrieche2.de" class="flex items-center group">
+              <svg class="w-5 h-5 text-[#97a926] mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+              </svg>
+              <div>
+                <p class="font-medium text-[#1a1a1a] group-hover:text-[#97a926] transition-colors">E-Mail</p>
+                <p class="text-[#8a8070] text-sm break-all">kontakt@restaurant-lieblingsgrieche2.de</p>
+              </div>
+            </a>
+          </div>
         </div>
       </div>
 
-      <!-- Google Maps -->
-      <div class="mt-12 rounded-2xl overflow-hidden shadow-lg border border-[#c8a951]/10">
+      <!-- Google Maps über beide Spalten -->
+      <div class="mt-8 rounded-2xl overflow-hidden shadow-lg border border-[#c8a951]/10">
         <iframe 
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2610.793743839655!2d8.3126!3d49.4274!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47964f6f6f6f6f6f%3A0x6f6f6f6f6f6f6f6f!2sNeckarstra%C3%9Fe%202e%2C%2067125%20Dannstadt!5e0!3m2!1sde!2sde!4v1600000000000!5m2!1sde!2sde"
           width="100%" 
@@ -459,12 +364,15 @@ const galleryImages = [
   </section>
 
   <!-- Footer -->
-  <footer class="bg-[#1a1a1a] text-white py-16 px-4 sm:px-6 lg:px-8">
-    <div class="max-w-6xl mx-auto">
+  <footer class="bg-[#1a1a1a] text-white">
+    <div class="max-w-6xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
       <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
         <!-- Column 1: Brand + Social -->
         <div>
           <img src="/images/lieblingsgrieche_logo_links_weiss.webp" alt="Lieblingsgrieche by Natasa" class="h-12 w-auto mb-4" />
+          <p class="text-[#8a8070] mb-6 text-sm">
+            Erleben Sie den Geschmack Griechenlands – frisch zubereitet mit traditionellen Rezepten und mediterranem Flair.
+          </p>
           <div class="flex space-x-4">
             <!-- Facebook -->
             <a href="#" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-[#97a926] transition-colors" aria-label="Facebook">
@@ -536,19 +444,21 @@ const galleryImages = [
               Karten & Bar
             </span>
             <span class="inline-flex items-center gap-1.5 px-3 py-1.5 bg-white/10 rounded-full text-xs text-white/70">
-              <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.111 16.404a5.964 5.964 0 01-.015.015m0 0L6.5 18m1.611-1.596a5.964 5.964 0 01-.015-.015m0 0L6.5 14m7.611 2.404a5.964 5.964 0 01-.015.015m0 0L12.5 18m1.611-1.596a5.964 5.964 0 01-.015-.015m0 0L12.5 14M3 12h18"/></svg>
+              <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18c0 0-8-4.5-8-10a6 6 0 0112 0c0 5.5-8 10-8 10zm0-7a2 2 0 100-4 2 2 0 000 4z"/></svg>
               WLAN
             </span>
             <span class="inline-flex items-center gap-1.5 px-3 py-1.5 bg-white/10 rounded-full text-xs text-white/70">
-              <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 8h14M5 8a2 2 0 110-4h14a2 2 0 110 4M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8m-9 4h4"/></svg>
-              Parkplätze
+              <svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2a1 1 0 011 1v8h2.5a4.5 4.5 0 110 9H12a1 1 0 01-1-1v-8H8.5a4.5 4.5 0 110-9H12zm3.5 10h-2.5v6h2.5a2.5 2.5 0 100-5zm-7-6H8v6h.5a2.5 2.5 0 100-5z"/></svg>
+              <span class="font-bold">P</span>
             </span>
           </div>
         </div>
       </div>
+    </div>
 
-      <!-- Divider + Bottom Row -->
-      <div class="border-t border-white/10 mt-12 pt-8">
+    <!-- Divider + Bottom Row -->
+    <div class="border-t border-white/10">
+      <div class="max-w-6xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
         <div class="flex flex-col md:flex-row justify-between items-center gap-4">
           <p class="text-sm text-[#8a8070]">
             © 2026 Lieblingsgrieche by Natasa. Alle Rechte vorbehalten.
@@ -832,6 +742,25 @@ const galleryImages = [
       });
     });
     
+    // Header Logo Scroll Effect
+    const headerLogo = document.getElementById('header-logo');
+    const mainNav = document.getElementById('main-nav');
+    
+    function handleScroll() {
+      toggleBackToTop();
+      
+      // Shrink logo on scroll
+      if (window.scrollY > 100) {
+        headerLogo.classList.remove('h-12');
+        headerLogo.classList.add('h-8');
+        mainNav.classList.add('shadow-md');
+      } else {
+        headerLogo.classList.remove('h-8');
+        headerLogo.classList.add('h-12');
+        mainNav.classList.remove('shadow-md');
+      }
+    }
+    
     // Fade-in animations with IntersectionObserver
     const fadeElements = document.querySelectorAll('.fade-in');
     
@@ -849,7 +778,7 @@ const galleryImages = [
     
     fadeElements.forEach(el => fadeObserver.observe(el));
     
-    // Scroll event listener for back to top
-    window.addEventListener('scroll', toggleBackToTop, { passive: true });
+    // Scroll event listener
+    window.addEventListener('scroll', handleScroll, { passive: true });
   </script>
 </Layout>
