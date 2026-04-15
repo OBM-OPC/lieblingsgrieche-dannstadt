@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Speisekarte - Platzhalter</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      width: 210mm;
+      height: 297mm;
+      margin: 0 auto;
+      background: #faf5eb;
+      font-family: 'Georgia', serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      border: 2px solid #97a926;
+      position: relative;
+    }
+    .header {
+      position: absolute;
+      top: 40px;
+      text-align: center;
+    }
+    h1 {
+      color: #1a1a1a;
+      font-size: 36px;
+      margin-bottom: 10px;
+    }
+    .subtitle {
+      color: #97a926;
+      font-size: 16px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+    }
+    .content {
+      text-align: center;
+      padding: 60px;
+    }
+    .placeholder-box {
+      border: 2px dashed #c8a951;
+      border-radius: 20px;
+      padding: 80px 60px;
+      background: rgba(151, 169, 38, 0.05);
+    }
+    .placeholder-text {
+      color: #8a8070;
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+    .placeholder-subtext {
+      color: #c8a951;
+      font-size: 14px;
+    }
+    .decorative-line {
+      width: 100px;
+      height: 2px;
+      background: #97a926;
+      margin: 30px auto;
+    }
+    .footer {
+      position: absolute;
+      bottom: 40px;
+      text-align: center;
+      color: #8a8070;
+      font-size: 12px;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <h1>Lieblingsgrieche</h1>
+    <div class="subtitle">by Natasa</div>
+  </div>
+  
+  <div class="content">
+    <div class="placeholder-box">
+      <div class="placeholder-text">🍽️ Speisekarte</div>
+      <div class="decorative-line"></div>
+      <div class="placeholder-subtext">
+        Platzhalter für PDF-Dokument<br>
+        DIN A4 Format (210 × 297 mm)<br><br>
+        Hier wird später die vollständige<br>
+        Speisekarte als PDF eingebettet.
+      </div>
+    </div>
+  </div>
+  
+  <div class="footer">
+    Neckarstraße 2e · 67125 Dannstadt · Tel: 06321 9398866
+  </div>
+</body>
+</html>
