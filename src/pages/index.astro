@@ -651,11 +651,24 @@ const galleryImages = [
       }
     });
     
-    // Smooth scroll for anchor links
+    // Smooth scroll for anchor links (except modals)
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
       anchor.addEventListener('click', function (e) {
+        const href = this.getAttribute('href');
+        
+        // Handle modal links
+        if (href === '#impressum' || href === '#datenschutz') {
+          e.preventDefault();
+          const modal = document.querySelector(href);
+          if (modal) {
+            modal.classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+          }
+          return;
+        }
+        
         e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
+        const target = document.querySelector(href);
         if (target) {
           target.scrollIntoView({
             behavior: 'smooth',
