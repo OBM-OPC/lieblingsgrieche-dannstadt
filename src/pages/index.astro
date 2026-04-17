@@ -56,7 +56,7 @@ const galleryImages = [
 
 <Layout>
   <!-- Navigation -->
-  <nav id="main-nav" class="fixed top-0 left-0 right-0 z-40 bg-[#faf5eb]/95 backdrop-blur-sm border-b border-[#c8a951]/20 transition-all duration-300">
+  <nav id="main-nav" class="fixed top-0 left-0 right-0 z-40 bg-[#faf5eb]/95 backdrop-blur-sm border-b border-[#c8a951]/20 transition-all duration-300 -translate-y-full">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex items-center justify-between h-auto py-2">
         <div class="flex-shrink-0 py-2">
@@ -683,15 +683,17 @@ const galleryImages = [
     function handleScroll() {
       toggleBackToTop();
       
-      // Shrink logo on scroll (only on desktop)
+      // Show/hide header on scroll (hidden at top, visible when scrolling)
       if (window.scrollY > 100) {
+        mainNav.classList.remove('-translate-y-full');
+        mainNav.classList.add('shadow-md');
         headerLogo.classList.remove('lg:h-16', 'md:h-14');
         headerLogo.classList.add('lg:h-12', 'md:h-10');
-        mainNav.classList.add('shadow-md');
       } else {
+        mainNav.classList.add('-translate-y-full');
+        mainNav.classList.remove('shadow-md');
         headerLogo.classList.remove('lg:h-12', 'md:h-10');
         headerLogo.classList.add('lg:h-16', 'md:h-14');
-        mainNav.classList.remove('shadow-md');
       }
     }
     
